@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Visual } from "./Visual"
+import { Avater } from "./Avater"
 import { Links } from "./Links"
 import styled from "styled-components"
 
@@ -18,7 +19,7 @@ const Container = styled.div`
   padding: 10px;
   margin: 10px;
   border-radius: 80px;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
   background-color: hsl(34, 41%, 70%);
 `
 
@@ -27,7 +28,7 @@ const Row1 = styled.div`
 `
 const Row2 = styled.div`
   padding-top:2em;
-  flex-basis: 40%;
+  flex-basis: 60%;
 `
 
 class App extends Component {

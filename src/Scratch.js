@@ -1,6 +1,7 @@
 import React from "react"
 import scratch from "./scratch.jpg"
 import styled, { keyframes } from "styled-components"
+import { RadiusImg } from "./RadiusImg"
 
 const rotate360 = keyframes`
   from {
@@ -12,10 +13,7 @@ const rotate360 = keyframes`
   }
 `;
 
-const Img = styled.img`
-  width : ${ ({size}) => size }px;
-  height : ${({size}) => size}px;
-  borderRadius : ${({size}) => size}px;
+const Img = styled(RadiusImg)`
   animation: ${rotate360} 8s linear infinite;
 `
 
