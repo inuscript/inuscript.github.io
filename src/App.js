@@ -5,30 +5,40 @@ import styled from "styled-components"
 
 const Body = styled.div`
   width: 100vw;
-  height: 100vh;
-  background-color: #D1B692;
+  height: auto;
+  min-height: 100vh;
+  background-color: hsl(34, 31%, 60%);
+  display: flex;
+  justify-content: center;
+ 
 `
 const Container = styled.div`
   display: flex;
-  width: 100%;
   justify-content: center;
+  padding: 10px;
   flex-wrap:wrap;
+  background-color: hsl(34, 41%, 70%);
 `
 
-const Center = styled.div`
-  flex-basis: 30%;
+const Row1 = styled.div`
+  flex-basis: 60%;
 `
-
+const Row2 = styled.div`
+  padding-top:2em;
+  flex-basis: 40%;
+`
 
 class App extends Component {
   render() {
     return (
       <Body>
         <Container>
-          <Center>
+          <Row1>
             <Visual />
-          </Center>
-          <Links />
+          </Row1>
+          <Row2>
+            <Links />
+          </Row2>
         </Container>
       </Body>
     );
