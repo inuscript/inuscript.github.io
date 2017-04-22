@@ -1,17 +1,11 @@
 import React, { Component } from 'react'
 import { Scratch } from "./Scratch"
-import glamorous from "glamorous"
-import { injectGlobal } from 'styled-components'
+import styles from "styled-components"
 
-injectGlobal`
-body{
-  padding:0;
-  margin:0;
-}
+const Container = styles.div`
+  display: flex
+  width: 100%
 `
-const Container = glamorous.div({
-  display: "flex"
-})
 
 class App extends Component {
   render() {
