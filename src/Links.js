@@ -1,11 +1,18 @@
 import React from "react"
 import styled from "styled-components"
 
-const List = ({href, children, oldHref}) => <li>
-  <a href={href}>{children}</a>{
-    (oldHref) ? <a href={href}>(old)</a> : ""
-  }
-</li>
+const OldLink = styled.a`
+  color: #555;
+  padding-left: 1em;
+`
+const Link = styled.a`
+  font-weight: bold;
+  color: #333;
+`
+const List = ({href, children, oldHref}) => <li>{[
+  <Link href={href}>{children}</Link>,
+  (oldHref) ? <OldLink href={href}>(old)</OldLink> : null
+]}</li>
 
 export const Links = () => {
   return <ul>
@@ -23,9 +30,6 @@ export const Links = () => {
     </List>
     <List href="http://sui.hateblo.jp/">
       Blog
-    </List>
-    <List href="https://github.com/inuscript/inuscript.github.io/issues">
-      Issue
     </List>
   </ul>
 }
