@@ -1,16 +1,26 @@
 import React from "react"
 import styled from "styled-components"
 
-const OldLink = styled.a`
-  color: #555;
+const Link = styled.a`
+  color: #333;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+`
+
+const OldLink = styled(Link)`
   padding-left: 1em;
 `
-const Link = styled.a`
+const ItemLink = styled(Link)`
+  font-size: 1.1rem;
+  text-decoration: none;
   font-weight: bold;
   color: #333;
 `
+
 const List = ({href, children, oldHref}) => <li>{[
-  <Link href={href}>{children}</Link>,
+  <ItemLink href={href}>{children}</ItemLink>,
   (oldHref) ? <OldLink href={href}>(old)</OldLink> : null
 ]}</li>
 

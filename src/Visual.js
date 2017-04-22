@@ -18,9 +18,15 @@ export const Scratch = ({size}) => <Img
   size={size}
 />
 
+const Link = styled.a`
+  text-decoration: none;
+`
+
 export const Visual = () => (
   <div>
-    <Title>inuscript.github.io</Title>
+    <Link href="/">
+      <Title>inuscript.github.io</Title>
+    </Link>
     <Scratch size={300}/>
   </div>
 )

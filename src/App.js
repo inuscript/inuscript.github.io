@@ -16,7 +16,7 @@ const Container = styled.div`
 `
 
 const Center = styled.div`
-  flex-basis: 50%;
+  flex-basis: 30%;
 `
 
 
