@@ -1,18 +1,36 @@
 import React, { Component } from 'react'
-import { Scratch } from "./Scratch"
-import styles from "styled-components"
+import { Visual } from "./Visual"
+import { Links } from "./Links"
+import styled from "styled-components"
 
-const Container = styles.div`
-  display: flex
-  width: 100%
+const Body = styled.div`
+  width: 100vw;
+  height: 100vh;
+  background-color: #D1B692;
 `
+const Container = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-wrap:wrap;
+`
+
+const Center = styled.div`
+  flex-basis: 50%;
+`
+
 
 class App extends Component {
   render() {
     return (
-      <Container>
-        <Scratch size={300}/>
-      </Container>
+      <Body>
+        <Container>
+          <Center>
+            <Visual />
+          </Center>
+          <Links />
+        </Container>
+      </Body>
     );
   }
 }
