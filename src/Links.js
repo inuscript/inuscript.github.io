@@ -20,8 +20,8 @@ const ItemLink = styled(Link)`
 `
 
 const List = ({href, children, oldHref}) => <li>{[
-  <ItemLink href={href}>{children}</ItemLink>,
-  (oldHref) ? <OldLink href={href}>(old)</OldLink> : null
+  <ItemLink key="new" href={href}>{children}</ItemLink>,
+  (oldHref) ? <OldLink key="old" href={href}>(old)</OldLink> : null
 ]}</li>
 
 export const Links = () => {

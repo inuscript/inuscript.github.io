@@ -17,7 +17,14 @@ const Img = styled(RadiusImg)`
   animation: ${rotate360} 8s linear infinite;
 `
 
-export const Scratch = ({size}) => <Img
+const Scr = ({size}) => <Img
   src={scratch}
   size={size}
 />
+
+export class Scratch extends React.Component {
+  render(){
+    return <Scr {...this.props} 
+    />
+  }
+}
