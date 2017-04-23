@@ -38,6 +38,7 @@ class App extends Component {
         <Container>
           <Row1>
             <Visual />
+            {/*<Avater/>*/}
           </Row1>
           <Row2>
             <Links />

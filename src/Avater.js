@@ -4,7 +4,7 @@ import styled from "styled-components"
 import { SizeImg, RadiusImg } from "./RadiusImg"
 
 const Img = styled(RadiusImg)`
-  border: 1px solid #333;
+  border: 2px solid #333;
   background: white;
 `
 const Center = styled.div`
@@ -12,6 +12,6 @@ const Center = styled.div`
 `
 export const Avater = () => (
   <Center>
-    <Img src={avater} size={60} />
+    <Img src={avater} size={48} />
   </Center>
 )
