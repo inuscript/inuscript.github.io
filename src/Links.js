@@ -26,7 +26,7 @@ const List = ({href, children, oldHref}) => <li>{[
 
 export const Links = () => {
   return <ul>
-    <List href="https://github.com/inuscript" oldHref="https://github.com/suisho">
+    <List href="https://github.com/terrierscript" oldHref="https://github.com/suisho">
       GitHub
     </List>
     <List href="https://www.npmjs.com/~inuscript" oldHref="https://www.npmjs.com/~suisho">
