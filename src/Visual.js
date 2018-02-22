@@ -18,7 +18,7 @@ const Link = styled.a`
 export const Visual = () => (
   <Center>
     <Link href="/">
-      <Title>inuscript.github.io</Title>
+      <Title>@terrierscript</Title>
     </Link>
     <Scratch size={300}/>
   </Center>
