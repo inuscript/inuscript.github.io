@@ -38,7 +38,7 @@ export const Links = () => {
     <List href="https://medium.com/inuscript/">
       Medium
     </List>
-    <List href="https://dev.to/inuscript">
+    <List href="https://dev.to/terrierscript">
       dev.to
     </List>
     <List href="https://twitter.com/terrierscript">
