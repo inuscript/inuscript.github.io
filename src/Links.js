@@ -32,7 +32,7 @@ export const Links = () => {
     <List href="https://www.npmjs.com/~inuscript" oldHref="https://www.npmjs.com/~suisho">
       npm
     </List>
-    <List href="https://qiita.com/inuscript">
+    <List href="https://qiita.com/terrierscript">
       Qiita
     </List>
     <List href="https://medium.com/inuscript/">
@@ -41,7 +41,7 @@ export const Links = () => {
     <List href="https://dev.to/inuscript">
       dev.to
     </List>
-    <List href="https://twitter.com/inuscript">
+    <List href="https://twitter.com/terrierscript">
       Twitter
     </List>
     <List href="http://sui.hateblo.jp/">
