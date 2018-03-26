@@ -24,6 +24,8 @@ export default class Feeds extends Component {
     });
   }
   render() {
+    console.log(feeds);
+    return;
     return this.state.feeds.map((item, i) => <Feed key={i} {...item} />);
   }
 }
