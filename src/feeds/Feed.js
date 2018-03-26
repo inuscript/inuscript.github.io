@@ -20,22 +20,25 @@ const Mark = styled.span`
   margin: 0 0.5em;
 `;
 
-const Title = styled.a`
+const Title = styled.span`
   color: #333;
   font-weight: bold;
 `;
 const Time = styled.div`
   padding-left: 0.5em;
 `;
+const Link = styled.a`
+  display: block;
+`;
 const Feed = ({ title, link, date, media, bgColor, color }) => {
   return (
     <FeedItem>
-      <div>
+      <Link href={link}>
         <Mark bgColor={bgColor} color={color}>
           {media}
         </Mark>
-        <Title href={link}>{title}</Title>
-      </div>
+        <Title>{title}</Title>
+      </Link>
       <div>
         <Time>{date.toString()}</Time>
       </div>
