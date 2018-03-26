@@ -5,6 +5,7 @@ import styled from "styled-components";
 const FeedItem = styled.a`
   width: 100%;
   display: block;
+  padding: 1em 0;
 `;
 
 const Mark = styled.span`
@@ -18,6 +19,7 @@ const Mark = styled.span`
   color: ${props => props.color || "#fff"};
   margin-right: 0.2em;
 `;
+
 const Title = styled.a`
   color: #333;
   font-weight: bold;

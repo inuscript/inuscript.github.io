@@ -24,6 +24,7 @@ const Container = styled.div`
 const Left = styled(Container)`
   justify-content: center;
   width: 30%;
+  min-width: 400px;
   border-radius: 80px;
   background-color: hsl(34, 41%, 70%);
 `;
