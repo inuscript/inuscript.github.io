@@ -13,14 +13,24 @@ const Body = styled.div`
   display: flex;
   justify-content: center;
 `;
+
 const Container = styled.div`
   display: flex;
-  justify-content: center;
   padding: 10px;
   margin: 10px;
   border-radius: 80px;
   flex-wrap: wrap;
   background-color: hsl(34, 41%, 70%);
+`;
+const Left = styled(Container)`
+  justify-content: center;
+  width: 30%;
+`;
+const Right = styled(Container)`
+  width: 60%;
+
+  padding: 40px;
+  overflow-y: scroll;
 `;
 
 const Row1 = styled.div`
@@ -35,7 +45,7 @@ class App extends Component {
   render() {
     return (
       <Body>
-        <Container>
+        <Left>
           <Row1>
             <Visual />
             {/*<Avater/>*/}
@@ -43,8 +53,11 @@ class App extends Component {
           <Row2>
             <Links />
           </Row2>
+        </Left>
+        <Right>
+          <h2>Recently Post</h2>
           <Feed />
-        </Container>
+        </Right>
       </Body>
     );
   }

@@ -9,6 +9,7 @@ import {
   catchError
 } from "rxjs/operators";
 
+// TODO: move rss-parser to another lib
 // https://github.com/bobby-brennan/rss-parser/issues/53
 // import Parser from "rss-parser";
 // const parser = new Parser();
@@ -25,25 +26,58 @@ const parseRssItem = item => {
   };
 };
 
-const fromRss = (url, mediaType) =>
+const config = [
+  {
+    media: "Qiita",
+    production: "/feed/qiita",
+    dev: null,
+    bgColor: "#55c500"
+  },
+  {
+    media: "dev.to",
+    production: "/feed/devto",
+    dev: "https://dev.to/feed/terrierscript",
+    bgColor: "#000"
+  },
+  {
+    media: "Medium",
+    production: "/feed/medium",
+    dev: null,
+    bgColor: "#fff",
+    color: "#000"
+  }
+];
+
+const fromRss = (url, config) =>
   from(parser.parseURL(url)).pipe(
     mergeMap(r => from(r.items)),
     map(parseRssItem),
-    map(item => ({ ...item, mediaType })),
+    map(item => ({ ...item, ...config })),
     catchError(err => {
       return of([]);
     })
   );
 
-const fromQiita = () =>
-  fromRss("https://qiita.com/terrierscript/feed.atom", "Qiita");
-const fromDevto = () => fromRss("https://dev.to/feed/terrierscript", "dev.to");
+const mock = {
+  title: "Mock",
+  url: "mock",
+  date: new Date()
+};
 
-const fromMedium = () =>
-  fromRss("https://medium.com/feed/@inuscript", "Medium");
+const createRssStream = config =>
+  config.map(({ production, dev, ...config }) => {
+    const url = process.env.NODE_ENV === "production" ? production : dev;
+    if (url === null) {
+      return from([mock]).pipe(
+        map(item => ({ ...item, ...config }))
+        // tap(c => console.log("tappp", c))
+      );
+    }
+    return fromRss(url, config);
+  });
 
 export default () => {
-  return merge(fromQiita(), fromDevto(), fromMedium()).pipe(
+  return merge(...createRssStream(config)).pipe(
     map(item => (Array.isArray(item) ? item : [item])),
     scan((acc, v) => {
       return [...acc, ...v].sort((a, b) => a.date > b.date);

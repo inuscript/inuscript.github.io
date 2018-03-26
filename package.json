@@ -24,7 +24,7 @@
     "deploy": "gh-pages -d build -b master"
   },
   "proxy": {
-    "/feed/qiita": {
+    "feed/qiita": {
       "target": "https://qiita.com/terrierscript/feed.atom"
     },
     "/feed/devto": {
