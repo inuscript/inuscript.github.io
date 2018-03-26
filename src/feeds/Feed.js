@@ -44,7 +44,7 @@ const Feed = ({ title, link, date, media, bgColor, color }) => {
         <Title>{title}</Title>
       </Link>
       <div>
-        <Time>{date.toString()}</Time>
+        <Time>{date.toLocaleString()}</Time>
       </div>
     </FeedItem>
   );
