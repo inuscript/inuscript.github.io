@@ -4,8 +4,11 @@
   "private": true,
   "homepage": "http://inuscript.github.io/",
   "dependencies": {
+    "axios": "^0.18.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "rss-parser": "^3.1.2",
+    "rxjs": "beta",
     "styled-components": "^3.2.3"
   },
   "devDependencies": {
@@ -15,7 +18,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build -b master"
