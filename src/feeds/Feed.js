@@ -18,10 +18,10 @@ const Mark = styled.span`
   background: ${props => props.bgColor};
   color: ${props => props.color || "#fff"};
   margin: 0 0.5em;
+  text-decoration: none;
 `;
 
 const Title = styled.span`
-  color: #333;
   font-weight: bold;
 `;
 const Time = styled.div`
@@ -29,6 +29,10 @@ const Time = styled.div`
 `;
 const Link = styled.a`
   display: block;
+  color: #333;
+  :visited: {
+    color: #333:
+  }
 `;
 const Feed = ({ title, link, date, media, bgColor, color }) => {
   return (
