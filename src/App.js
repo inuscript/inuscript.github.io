@@ -30,7 +30,7 @@ const Left = styled(Container)`
 const Right = styled(Container)`
   width: 60%;
 
-  padding: 40px;
+  padding: 10px 40px;
   overflow-y: scroll;
 `;
 

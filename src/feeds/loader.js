@@ -26,7 +26,7 @@ const parseRssItem = item => {
   };
 };
 
-const config = [
+const rssConfig = [
   {
     media: "Qiita",
     production: "/feed/qiita",
@@ -64,8 +64,8 @@ const mock = {
   date: new Date()
 };
 
-const createRssStream = config =>
-  config.map(({ production, dev, ...config }) => {
+const createRssStream = rssConfig =>
+  rssConfig.map(({ production, dev, ...config }) => {
     const url = process.env.NODE_ENV === "production" ? production : dev;
     if (url === null) {
       return from(Array(10).fill(mock)).pipe(
@@ -77,10 +77,10 @@ const createRssStream = config =>
   });
 
 export default () => {
-  return merge(...createRssStream(config)).pipe(
+  return merge(...createRssStream(rssConfig)).pipe(
     map(item => (Array.isArray(item) ? item : [item])),
     scan((acc, v) => {
-      return [...acc, ...v].sort((a, b) => a.date < b.date);
+      return [...acc, ...v].sort((a, b) => a.date.getTime() < b.date.getTime());
     })
   );
 };
