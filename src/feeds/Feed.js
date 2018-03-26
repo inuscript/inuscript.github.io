@@ -24,7 +24,7 @@ const Mark = styled.span`
 
 const Title = styled.span`
   font-weight: bold;
-  font-size: 1.5em;
+  font-size: 1.4em;
 `;
 const Time = styled.div`
   padding-left: 0.5em;
