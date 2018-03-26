@@ -30,7 +30,7 @@
     "/feed/devto": {
       "target": "https://dev.to/feed/terrierscript"
     },
-    "/feed/medimu": {
+    "/feed/medium": {
       "target": "https://medium.com/feed/@inuscript"
     }
   }

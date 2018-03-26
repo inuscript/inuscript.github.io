@@ -8,9 +8,12 @@ import {
   reduce,
   catchError
 } from "rxjs/operators";
-import Parser from "rss-parser";
 
-const parser = new Parser();
+// https://github.com/bobby-brennan/rss-parser/issues/53
+// import Parser from "rss-parser";
+// const parser = new Parser();
+import "rss-parser/dist/rss-parser.min.js";
+const parser = new RSSParser();
 
 const parseRssItem = item => {
   const { title, link, pubDate } = item;
