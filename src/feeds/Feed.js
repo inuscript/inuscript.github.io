@@ -32,9 +32,7 @@ const Feed = ({ title, link, date, media, bgColor, color }) => {
         <Title href={link}>{title}</Title>
       </div>
       <div>
-        <div>
-          {date.toString()}( {date.getTime()} )
-        </div>
+        <div>{date.toString()}</div>
       </div>
     </FeedItem>
   );

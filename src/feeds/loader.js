@@ -61,7 +61,7 @@ export default () => {
       const result = [...acc, ...v].sort(
         (a, b) => a.date.getTime() - b.date.getTime()
       );
-      console.log(acc, v, result);
+      // console.log(acc, v, result);
       return result;
     })
   );
