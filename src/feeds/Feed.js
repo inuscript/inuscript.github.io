@@ -17,12 +17,15 @@ const Mark = styled.span`
   width: 4em;
   background: ${props => props.bgColor};
   color: ${props => props.color || "#fff"};
-  margin-right: 0.2em;
+  margin: 0 0.5em;
 `;
 
 const Title = styled.a`
   color: #333;
   font-weight: bold;
+`;
+const Time = styled.div`
+  padding-left: 0.5em;
 `;
 const Feed = ({ title, link, date, media, bgColor, color }) => {
   return (
@@ -34,7 +37,7 @@ const Feed = ({ title, link, date, media, bgColor, color }) => {
         <Title href={link}>{title}</Title>
       </div>
       <div>
-        <div>{date.toString()}</div>
+        <Time>{date.toString()}</Time>
       </div>
     </FeedItem>
   );
