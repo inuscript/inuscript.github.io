@@ -8,6 +8,7 @@ import {
   reduce,
   catchError
 } from "rxjs/operators";
+import rssConfig from "./rssConfig";
 
 // TODO: move rss-parser to another lib
 // https://github.com/bobby-brennan/rss-parser/issues/53
@@ -25,29 +26,6 @@ const parseRssItem = item => {
     date: new Date(pubDate)
   };
 };
-
-const rssConfig = [
-  {
-    media: "Qiita",
-    production: "/feed/qiita",
-    dev: null,
-    bgColor: "#55c500"
-  },
-  {
-    media: "dev.to",
-    production: "/feed/devto",
-    dev: "https://dev.to/feed/terrierscript",
-    bgColor: "#000"
-  },
-  {
-    media: "Medium",
-    production: "/feed/medium",
-    dev: null,
-    bgColor: "#fff",
-    color: "#000"
-  }
-];
-
 const fromRss = (url, config) =>
   from(parser.parseURL(url)).pipe(
     mergeMap(r => from(r.items)),
