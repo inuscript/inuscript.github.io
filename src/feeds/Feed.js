@@ -10,6 +10,7 @@ const FeedItem = styled.a`
 
 const Mark = styled.span`
   display: inline-block;
+  font-size: 1.2em;
   font-weight: bold;
   text-align: center;
   padding: 0.2em;
@@ -23,6 +24,7 @@ const Mark = styled.span`
 
 const Title = styled.span`
   font-weight: bold;
+  font-size: 1.5em;
 `;
 const Time = styled.div`
   padding-left: 0.5em;
