@@ -12,6 +12,7 @@ import {
 // https://github.com/bobby-brennan/rss-parser/issues/53
 // import Parser from "rss-parser";
 // const parser = new Parser();
+/* global RSSParser */
 import "rss-parser/dist/rss-parser.min.js";
 const parser = new RSSParser();
 
