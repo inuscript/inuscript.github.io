@@ -7,8 +7,8 @@ import Feed from "./feeds/Feed";
 
 const Body = styled.div`
   width: 100vw;
-  height: auto;
-  min-height: 100vh;
+  height: 100vh;
+  min-height: 700px;
   background-color: hsl(34, 31%, 60%);
   display: flex;
   justify-content: center;

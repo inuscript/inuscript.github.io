@@ -80,7 +80,7 @@ export default () => {
   return merge(...createRssStream(config)).pipe(
     map(item => (Array.isArray(item) ? item : [item])),
     scan((acc, v) => {
-      return [...acc, ...v].sort((a, b) => a.date > b.date);
+      return [...acc, ...v].sort((a, b) => a.date < b.date);
     })
   );
 };
