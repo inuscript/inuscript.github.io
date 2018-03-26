@@ -68,7 +68,7 @@ const createRssStream = config =>
   config.map(({ production, dev, ...config }) => {
     const url = process.env.NODE_ENV === "production" ? production : dev;
     if (url === null) {
-      return from([mock]).pipe(
+      return from(Array(10).fill(mock)).pipe(
         map(item => ({ ...item, ...config }))
         // tap(c => console.log("tappp", c))
       );

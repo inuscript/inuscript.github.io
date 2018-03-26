@@ -16,15 +16,16 @@ const Body = styled.div`
 
 const Container = styled.div`
   display: flex;
+  flex-wrap: wrap;
+
   padding: 10px;
   margin: 10px;
-  border-radius: 80px;
-  flex-wrap: wrap;
-  background-color: hsl(34, 41%, 70%);
 `;
 const Left = styled(Container)`
   justify-content: center;
   width: 30%;
+  border-radius: 80px;
+  background-color: hsl(34, 41%, 70%);
 `;
 const Right = styled(Container)`
   width: 60%;
