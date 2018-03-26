@@ -26,6 +26,7 @@ const parseRssItem = item => {
     date: new Date(pubDate)
   };
 };
+
 const fromRss = (url, config) =>
   from(parser.parseURL(url)).pipe(
     mergeMap(r => from(r.items)),
@@ -59,7 +60,7 @@ export default () => {
     map(item => (Array.isArray(item) ? item : [item])),
     scan((acc, v) => {
       const result = [...acc, ...v].sort(
-        (a, b) => a.date.getTime() - b.date.getTime()
+        (a, b) => b.date.getTime() - a.date.getTime()
       );
       // console.log(acc, v, result);
       return result;
