@@ -58,7 +58,11 @@ export default () => {
   return merge(...createRssStream(rssConfig)).pipe(
     map(item => (Array.isArray(item) ? item : [item])),
     scan((acc, v) => {
-      return [...acc, ...v].sort((a, b) => a.date.getTime() < b.date.getTime());
+      const result = [...acc, ...v].sort(
+        (a, b) => a.date.getTime() < b.date.getTime()
+      );
+      console.log(acc, v, result);
+      return result;
     })
   );
 };
