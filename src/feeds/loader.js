@@ -59,7 +59,7 @@ export default () => {
     map(item => (Array.isArray(item) ? item : [item])),
     scan((acc, v) => {
       const result = [...acc, ...v].sort(
-        (a, b) => a.date.getTime() < b.date.getTime()
+        (a, b) => a.date.getTime() - b.date.getTime()
       );
       console.log(acc, v, result);
       return result;
