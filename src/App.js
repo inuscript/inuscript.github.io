@@ -7,10 +7,11 @@ import Feed from "./feeds/Feed";
 
 const Body = styled.div`
   width: 100vw;
-  height: 100vh;
   min-height: 700px;
   background-color: hsl(34, 31%, 60%);
   display: flex;
+  flex-wrap: wrap;
+
   justify-content: center;
 `;
 
@@ -23,16 +24,16 @@ const Container = styled.div`
 `;
 const Left = styled(Container)`
   justify-content: center;
-  width: 30%;
-  min-width: 400px;
+  width: 20%;
   border-radius: 80px;
   background-color: hsl(34, 41%, 70%);
+  min-width: 400px;
 `;
 const Right = styled(Container)`
-  width: 60%;
-
+  width: 30%;
   padding: 10px 40px;
   overflow-y: scroll;
+  min-width: 400px;
 `;
 
 const Row1 = styled.div`
@@ -43,6 +44,10 @@ const Row2 = styled.div`
   flex-basis: 60%;
 `;
 
+const Title = styled.h2`
+  vertical-align: middle;
+`;
+
 class App extends Component {
   render() {
     return (
@@ -50,14 +55,16 @@ class App extends Component {
         <Left>
           <Row1>
             <Visual />
-            {/*<Avater/>*/}
           </Row1>
           <Row2>
             <Links />
           </Row2>
         </Left>
         <Right>
-          <h2>Recently Post</h2>
+          <Title>
+            <Avater />
+            <span>Recently Posted</span>
+          </Title>
           <Feed />
         </Right>
       </Body>

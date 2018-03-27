@@ -1,17 +1,21 @@
-import React, { Component } from 'react'
-import avater from "./avater.png"
-import styled from "styled-components"
-import { SizeImg, RadiusImg } from "./RadiusImg"
+import React, { Component } from "react";
+import avater from "./avater.png";
+import styled from "styled-components";
+import { SizeImg, RadiusImg } from "./RadiusImg";
 
 const Img = styled(RadiusImg)`
-  border: 2px solid #333;
+  border: 0 solid #333;
   background: white;
-`
+  vertical-align: middle;
+`;
+
 const Center = styled.div`
-  text-align: center;
-`
+  display: inline-block;
+  margin-right: 0.2em;
+`;
+
 export const Avater = () => (
   <Center>
     <Img src={avater} size={48} />
   </Center>
-)
+);

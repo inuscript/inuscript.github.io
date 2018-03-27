@@ -39,7 +39,7 @@ const fromRss = (url, config) =>
 
 const mock = {
   title: "Mock",
-  url: "mock",
+  link: "mock",
   date: new Date()
 };
 

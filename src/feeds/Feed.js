@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import load from "./loader";
 import styled from "styled-components";
 
-const FeedItem = styled.a`
+const FeedItem = styled.div`
   width: 100%;
   display: block;
   padding: 1em 0;
@@ -64,7 +64,7 @@ export default class Feeds extends Component {
     });
   }
   render() {
-    console.log(this.state.feeds);
+    // console.log(this.state.feeds);
     // return null;
     return this.state.feeds.map((item, i) => <Feed key={i} {...item} />);
   }
