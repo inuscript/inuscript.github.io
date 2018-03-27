@@ -28,6 +28,7 @@ const Left = styled(Container)`
   border-radius: 80px;
   background-color: hsl(34, 41%, 70%);
   min-width: 400px;
+  max-height: 640px;
 `;
 const Right = styled(Container)`
   width: 30%;
