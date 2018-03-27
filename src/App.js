@@ -22,6 +22,7 @@ const Container = styled.div`
   padding: 10px;
   margin: 10px;
 `;
+
 const Left = styled(Container)`
   justify-content: center;
   width: 20%;
@@ -30,6 +31,7 @@ const Left = styled(Container)`
   min-width: 400px;
   max-height: 640px;
 `;
+
 const Right = styled(Container)`
   width: 30%;
   padding: 10px 40px;
