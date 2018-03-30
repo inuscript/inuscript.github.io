@@ -2,7 +2,7 @@ import React from "react";
 
 export const Form = () => {
   return (
-    <form method="POST" data-netlify="true">
+    <form name="contact" method="POST" data-netlify="true">
       <div>
         お名前: <input name="text" />
       </div>
