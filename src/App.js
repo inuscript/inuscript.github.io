@@ -62,7 +62,7 @@ class App extends Component {
           </Row1>
           <Row2>
             <Links />
-            <Form />
+            {/* <Form /> */}
           </Row2>
         </Left>
         <Right>
