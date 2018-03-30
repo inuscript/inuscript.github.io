@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 import avater from "./avater.png";
 import styled from "styled-components";
-import { SizeImg, RadiusImg } from "./RadiusImg";
+import { RadiusImg } from "../component/RadiusImg";
 
 const Img = styled(RadiusImg)`
   border: 0 solid #333;

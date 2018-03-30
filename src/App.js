@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { Visual } from "./Visual";
-import { Avater } from "./Avater";
-import { Links } from "./Links";
+import { Visual } from "./visual/Visual";
+import { Avater } from "./avater/Avater";
+import { Links } from "./links/Links";
 import styled from "styled-components";
 import Feed from "./feeds/Feed";
 
