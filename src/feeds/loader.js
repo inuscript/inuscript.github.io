@@ -1,4 +1,4 @@
-import { merge, from, create, of } from "rxjs";
+import { merge, from, create, of } from "rxjs"
 import {
   map,
   mergeMap,
@@ -7,25 +7,25 @@ import {
   tap,
   reduce,
   catchError
-} from "rxjs/operators";
-import rssConfig from "./rssConfig";
+} from "rxjs/operators"
+import rssConfig from "./rssConfig"
 
 // TODO: move rss-parser to another lib
 // https://github.com/bobby-brennan/rss-parser/issues/53
 // import Parser from "rss-parser";
 // const parser = new Parser();
 /* global RSSParser */
-import "rss-parser/dist/rss-parser.min.js";
-const parser = new RSSParser();
+import "rss-parser/dist/rss-parser.min.js"
+const parser = new RSSParser()
 
 const parseRssItem = item => {
-  const { title, link, pubDate } = item;
+  const { title, link, pubDate } = item
   return {
     title,
     link,
     date: new Date(pubDate)
-  };
-};
+  }
+}
 
 const fromRss = (url, config) =>
   from(parser.parseURL(url)).pipe(
@@ -33,27 +33,27 @@ const fromRss = (url, config) =>
     map(parseRssItem),
     map(item => ({ ...item, ...config })),
     catchError(err => {
-      return of([]);
+      return of([])
     })
-  );
+  )
 
 const mock = {
   title: "Mock",
   link: "mock",
   date: new Date()
-};
+}
 
 const createRssStream = rssConfig =>
   rssConfig.map(({ production, dev, ...config }) => {
-    const url = process.env.NODE_ENV === "production" ? production : dev;
+    const url = process.env.NODE_ENV === "production" ? production : dev
     if (url === null) {
       return from(Array(1).fill(mock)).pipe(
         map(item => ({ ...item, ...config }))
         // tap(c => console.log("tappp", c))
-      );
+      )
     }
-    return fromRss(url, config);
-  });
+    return fromRss(url, config)
+  })
 
 export default () => {
   return merge(...createRssStream(rssConfig)).pipe(
@@ -61,9 +61,9 @@ export default () => {
     scan((acc, v) => {
       const result = [...acc, ...v].sort(
         (a, b) => b.date.getTime() - a.date.getTime()
-      );
+      )
       // console.log(acc, v, result);
-      return result;
+      return result
     })
-  );
-};
+  )
+}
