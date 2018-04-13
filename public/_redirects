@@ -1,4 +1,5 @@
 /feed/qiita https://qiita.com/terrierscript/feed.atom 200
 /feed/devto https://dev.to/feed/terrierscript 200
 /feed/medium https://medium.com/feed/@terrierscript 200
+/feed/snippet https://snippet.terrierscript.com/rss.xml 200
 https://terrier.netlify.com/* https://terrierscript.com/:splat 301!

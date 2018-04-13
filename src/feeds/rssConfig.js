@@ -18,4 +18,12 @@ export default [
     bgColor: "#fff",
     color: "#000"
   }
+  // {
+  //   media: "Blog",
+  //   production: "/feed/snippet",
+  //   dev: null,
+  //   bgColor: "#ccc",
+  //   color: "#000",
+  //   limit: 5
+  // }
 ];

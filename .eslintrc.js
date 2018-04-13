@@ -16,4 +16,4 @@ module.exports = {
     "no-unused-vars": 0, // [1, {"vars" : "all", "args" : "after-used"} ],
     "no-comma-dangle": false
   }
-};
+}
