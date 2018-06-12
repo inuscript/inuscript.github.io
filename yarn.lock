@@ -6131,9 +6131,9 @@ rx@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/rx/-/rx-4.1.0.tgz#a5f13ff79ef3b740fe30aa803fb09f98805d4782"
 
-rxjs@beta:
-  version "6.0.0-beta.2"
-  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-6.0.0-beta.2.tgz#305176fec8d6d783949ad6a10812a323e35d84fd"
+rxjs@^6:
+  version "6.2.0"
+  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-6.2.0.tgz#e024d0e180b72756a83c2aaea8f25423751ba978"
   dependencies:
     tslib "^1.9.0"
 

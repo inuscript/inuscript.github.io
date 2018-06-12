@@ -1,4 +1,9 @@
-import { merge, from, create, of } from "rxjs"
+import {
+  merge,
+  from,
+  create,
+  of
+} from "rxjs"
 import {
   map,
   mergeMap,
@@ -19,7 +24,11 @@ import "rss-parser/dist/rss-parser.min.js"
 const parser = new RSSParser()
 
 const parseRssItem = item => {
-  const { title, link, pubDate } = item
+  const {
+    title,
+    link,
+    pubDate
+  } = item
   return {
     title,
     link,
@@ -31,7 +40,9 @@ const fromRss = (url, config) =>
   from(parser.parseURL(url)).pipe(
     mergeMap(r => from(r.items)),
     map(parseRssItem),
-    map(item => ({ ...item, ...config })),
+    map(item => ({ ...item,
+      ...config
+    })),
     catchError(err => {
       return of([])
     })
@@ -43,16 +54,28 @@ const mock = {
   date: new Date()
 }
 
+const getUrl = (config) => {
+  const {
+    dev,
+    production
+  } = config
+  return process.env.NODE_ENV === "production" ? production : dev
+}
+
+const fromDummy = (config) => {
+  return from(Array(1).fill(mock)).pipe(map(item => ({
+    ...item,
+    ...config
+  })));
+}
+
 const createRssStream = rssConfig =>
-  rssConfig.map(({ production, dev, ...config }) => {
-    const url = process.env.NODE_ENV === "production" ? production : dev
-    if (url === null) {
-      return from(Array(1).fill(mock)).pipe(
-        map(item => ({ ...item, ...config }))
-        // tap(c => console.log("tappp", c))
-      )
+  rssConfig.map((config) => {
+    const url = getUrl(config)
+    if (url !== null) {
+      return fromRss(url, config)
     }
-    return fromRss(url, config)
+    return fromDummy(config)
   })
 
 export default () => {
