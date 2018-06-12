@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Visual } from "./visual/Visual";
 import { Avater } from "./avater/Avater";
 import { Links } from "./links/Links";
-import { Form } from "./form/Form";
 import styled from "styled-components";
 import Feed from "./feeds/Feed";
 

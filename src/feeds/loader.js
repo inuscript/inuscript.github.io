@@ -6,10 +6,7 @@ import {
 import {
   map,
   mergeMap,
-  mergeAll,
   scan,
-  tap,
-  reduce,
   catchError
 } from "rxjs/operators"
 import rssConfig from "./rssConfig"

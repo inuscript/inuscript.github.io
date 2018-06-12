@@ -16,7 +16,7 @@ const Mark = styled.span`
   padding: 0.2em;
   border-radius: 4px;
   width: 4em;
-  background: ${props => props.bgColor};
+  background: ${props => props.background};
   color: ${props => props.color || "#fff"};
   margin: 0 0.5em;
   text-decoration: none;
@@ -40,7 +40,7 @@ const Feed = ({ title, link, date, media, bgColor, color }) => {
   return (
     <FeedItem>
       <Link href={link}>
-        <Mark bgColor={bgColor} color={color}>
+        <Mark background={bgColor} color={color}>
           {media}
         </Mark>
         <Title>{title}</Title>
