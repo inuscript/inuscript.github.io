@@ -8,7 +8,8 @@ const FeedItem = styled.div`
   padding: 1em 0;
 `
 
-const Mark = styled.span`
+/** @type {any} */
+const Mark = styled.div`
   display: inline-block;
   font-size: 1.2em;
   font-weight: bold;
@@ -16,7 +17,10 @@ const Mark = styled.span`
   padding: 0.2em;
   border-radius: 4px;
   width: 4em;
-  background: ${props => props.background};
+  background-color: ${
+    /** @type {any} */
+    props => props.backgroundColor
+  };
   color: ${props => props.color || "#fff"};
   margin: 0 0.5em;
   text-decoration: none;
@@ -40,7 +44,7 @@ const Feed = ({ title, link, date, media, bgColor, color }) => {
   return (
     <FeedItem>
       <Link href={link}>
-        <Mark background={bgColor} color={color}>
+        <Mark backgroundColor={bgColor} color={color}>
           {media}
         </Mark>
         <Title>{title}</Title>
