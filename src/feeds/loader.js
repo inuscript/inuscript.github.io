@@ -1,7 +1,6 @@
 import {
   merge,
   from,
-  create,
   of
 } from "rxjs"
 import {
@@ -21,6 +20,7 @@ import rssConfig from "./rssConfig"
 // const parser = new Parser();
 /* global RSSParser */
 import "rss-parser/dist/rss-parser.min.js"
+// @ts-ignore
 const parser = new RSSParser()
 
 const parseRssItem = item => {
