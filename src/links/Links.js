@@ -19,7 +19,7 @@ const ItemLink = styled(Link)`
   color: #333;
 `
 
-const List = ({ href, children, oldHref }) => (
+const List = ({ href, children, oldHref = null }) => (
   <li>
     {[
       <ItemLink key="new" href={href}>

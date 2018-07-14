@@ -8,7 +8,6 @@ const FeedItem = styled.div`
   padding: 1em 0;
 `
 
-/** @type {any} */
 const Mark = styled.div`
   display: inline-block;
   font-size: 1.2em;
@@ -18,8 +17,7 @@ const Mark = styled.div`
   border-radius: 4px;
   width: 4em;
   background-color: ${
-    /** @type {any} */
-    props => props.backgroundColor
+    ({backgroundColor}) => backgroundColor
   };
   color: ${props => props.color || "#fff"};
   margin: 0 0.5em;

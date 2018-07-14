@@ -3,6 +3,7 @@ import avater from "./avater.png";
 import styled from "styled-components";
 import { RadiusImg } from "../component/RadiusImg";
 
+
 const Img = styled(RadiusImg)`
   border: 0 solid #333;
   background: white;

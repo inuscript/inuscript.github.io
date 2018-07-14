@@ -9,7 +9,7 @@ export const Form = () => {
       <div>
         <textarea name="body" />
       </div>
-      <button type="submit" onc>
+      <button type="submit" onClick={() => {} } >
         Send
       </button>
     </form>
