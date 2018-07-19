@@ -1,0 +1,25 @@
+[[redirects]]
+  from = "/feed/qiita"
+  to = "https://qiita.com/terrierscript/feed.atom"
+  status = 200
+[[redirects]]
+  from = "/feed/devto" 
+  to = "https://dev.to/feed/terrierscript"
+  status = 200
+[[redirects]]
+  from = "/feed/medium" 
+  to = "https://medium.com/feed/@terrierscript"
+  status =  200
+[[redirects]]
+  from = "/feed/snippet" 
+  to = "https://snippet.terrierscript.com/rss.xml"
+  status =  200
+[[redirects]]
+  from = "/feed/scrapbox" 
+  to = "https://scrapbox.io/api/feed/terrierdogrun/"
+  status =  200
+[[redirects]]
+  from = "https://terrier.netlify.com/*" 
+  to = "https://terrierscript.com/:splat" 
+  status = 301
+  force = true
