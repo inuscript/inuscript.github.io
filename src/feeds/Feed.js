@@ -13,7 +13,7 @@ const Mark = styled.div`
   font-size: 1.2em;
   font-weight: bold;
   text-align: center;
-  padding: 0.2em;
+  padding: 0.2em 0.6em;
   border-radius: 4px;
   width: 4em;
   background-color: ${
