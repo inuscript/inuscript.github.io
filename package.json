@@ -23,8 +23,8 @@
     "react-scripts": "^1.1.1"
   },
   "scripts": {
-    "start": "parcel start index.html",
-    "build": "parcel build index.html",
+    "start": "parcel start public/index.html",
+    "build": "parcel build public/index.html",
     "test": "react-scripts test",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build -b master"
