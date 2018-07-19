@@ -55,8 +55,11 @@ const Feed = ({ title, link, date, media, bgColor, color }) => {
 }
 
 export default class Feeds extends Component {
-  state = {
-    feeds: []
+  constructor(props){
+    super(props)
+    this.state = {
+      feeds: []
+    }
   }
   componentDidMount() {
     load().subscribe(feeds => {
