@@ -49,11 +49,12 @@ export const Links = () => {
       >
         npm
       </List>
+      <List href="https://twitter.com/terrierscript">Twitter</List>
       <List href="https://qiita.com/terrierscript">Qiita</List>
       <List href="https://medium.com/inuscript/">Medium</List>
       <List href="https://dev.to/terrierscript">dev.to</List>
-      <List href="https://twitter.com/terrierscript">Twitter</List>
-      <List href="http://snippet.terrierscript.com/">Blog</List>
+      <List href="https://scrapbox.io/terrierdogrun/">Scrapbox</List>
+      <List href="https://snippet.terrierscript.com/">Blog</List>
     </ul>
   )
 }
