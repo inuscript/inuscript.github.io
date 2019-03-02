@@ -53,7 +53,7 @@ export const Links = () => {
       <List href="https://qiita.com/terrierscript">Qiita</List>
       <List href="https://medium.com/inuscript/">Medium</List>
       <List href="https://dev.to/terrierscript">dev.to</List>
-      <List href="https://scrapbox.io/terrierdogrun/">Scrapbox</List>
+      <List href="https://scrapbox.io/terrierscript/">Scrapbox</List>
       <List href="https://snippet.terrierscript.com/">Blog</List>
     </ul>
   )
