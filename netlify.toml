@@ -17,7 +17,7 @@
   force = false
 [[redirects]]
   from = "/feed/snippet"
-  to = "https://snippet.terrierscript.com/rss.xml"
+  to = "https://snippet.terrier.dev/rss.xml"
   status = 200
   force = false
 [[redirects]]
